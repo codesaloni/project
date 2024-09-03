@@ -12,17 +12,9 @@
         
     <h2 style="margin-top: 40px; margin-left: 45%; color: wheat;">Register</h2>
     <div class="container" style="height: 70vh; width: 40%; margin-top: 40px;">
-        <div class="message">
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-danger">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
-        </div>
+        
         <form method="post" class="mx-auto" style="max-width: 400px;">
-            {% csrf_token %}
+            
             
             <div class="mb-3">
                 <label for="username" class="form-label" style="color: wheat;">Username:</label>
@@ -70,16 +62,7 @@
      <div class="c" style="height: 100vh; padding-top: 1px; background-color: rgba(0, 0, 0, 0.449);">
          <div class="container d-flex justify-content-center align-items-center" style="height: 70vh; margin-top: 70px;">
              
-             <!-- Message Display Section -->
-             <div class="message">
-                 {% if messages %}
-                     {% for message in messages %}
-                         <div class="alert alert-danger" role="alert">
-                             {{ message }}
-                         </div>
-                     {% endfor %}
-                 {% endif %}
-             </div>
+            
              
              <form method="post" class="mx-auto text-center" style="width: 400px; height: 500px; background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 15px;">
                  {% csrf_token %}
@@ -109,8 +92,8 @@
                      </select>
                  </div>
                  
-                 <button type="submit" class="btn btn-primary w-100">Register</button>
-                 <h6 style="margin-top: 10px;color: black;">Already have an account? <a href="{% url 'login' %}">Login here</a></h6>
+                 <button type="button" class="btn btn-primary w-100">Register</button>
+                 <h6 style="margin-top: 10px;color: black;">Already have an account? <a href="">Login here</a></h6>
              </form>
          </div>
      </div>
