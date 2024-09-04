@@ -1,4 +1,21 @@
- {% include 'base.html' %}
+<tr>
+                                         <td>veg roll</td>
+                                         <td>1</td>
+                                         <td>60</td>
+                                         <td>60</td>
+                                         <td>
+                                             <div class="d-flex justify-content-around">
+                                                 <form action="" method="post" class="d-inline">
+                                                     
+                                                     <button type="submit" class="btn btn-success btn-sm">Order now</button>
+                                                 </form>
+                                                 <form action="#" method="post" class="d-inline">
+                                                     
+                                                     <button type="submit" class="btn btn-danger btn-sm">Empty cart</button>
+                                                 </form>
+                                             </div>
+                                         </td>
+                                     </tr>
 
  <body style="background-image: url('https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-repeat: no-repeat; background-size: cover;">
      <div class="c" style="min-height: 100vh; padding-top: 1px; background-color: rgba(0, 0, 0, 0.7);">
@@ -19,29 +36,47 @@
                                      </tr>
                                  </thead>
                                  <tbody>
-                                     {% for item in cart_items %}
+                                    
                                      <tr>
-                                         <td>{{ item.product.name }}</td>
-                                         <td>{{ item.quantity }}</td>
-                                         <td>{{ item.product.price }}</td>
-                                         <td>{{ item.total_price }}</td>
+                                         <td>veg roll</td>
+                                         <td>1</td>
+                                         <td>60</td>
+                                         <td>60</td>
                                          <td>
                                              <div class="d-flex justify-content-around">
                                                  <form action="" method="post" class="d-inline">
-                                                     {% csrf_token %}
+                                                     
                                                      <button type="submit" class="btn btn-success btn-sm">Order now</button>
                                                  </form>
-                                                 <form action="{% url 'remove_from_cart' item.product.id %}" method="post" class="d-inline">
-                                                     {% csrf_token %}
+                                                 <form action="#" method="post" class="d-inline">
+                                                     
                                                      <button type="submit" class="btn btn-danger btn-sm">Empty cart</button>
                                                  </form>
                                              </div>
                                          </td>
                                      </tr>
-                                     {% endfor %}
+                                  <tr>
+                                         <td>fries</td>
+                                         <td>1</td>
+                                         <td>90</td>
+                                         <td>60</td>
+                                         <td>
+                                             <div class="d-flex justify-content-around">
+                                                 <form action="" method="post" class="d-inline">
+                                                     
+                                                     <button type="submit" class="btn btn-success btn-sm">Order now</button>
+                                                 </form>
+                                                 <form action="#" method="post" class="d-inline">
+                                                     
+                                                     <button type="submit" class="btn btn-danger btn-sm">Empty cart</button>
+                                                 </form>
+                                             </div>
+                                         </td>
+                                     </tr>
+                                     
                                  </tbody>
                              </table>
-                             <h3 class="text-right mt-4">Total: {{ total }}</h3>
+                             <h3 class="text-right mt-4">Total: 150</h3>
                          </div>
                      </div>
                  </div>
